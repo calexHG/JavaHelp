@@ -67,8 +67,8 @@ open source project includes the source to the reference implementation.
 <p>
 The JavaHelp system provides developers and authors with a standard,
 fully featured, easy to use system for presenting online information
-to Java application users.  The JavaHelp system is a optional package
-to the Java Platform, Standard Edition ("Java SE").
+to Java application users.  The JavaHelp system is a
+Java Platform, Standard Edition ("Java SE") optional package.
 </p>
 <p>
 The JavaHelp system consists of a fully featured, extensible
@@ -131,6 +131,37 @@ to help topics.
 <h3>Build the JavaHelp System</h3>
 <!--END SECTION HEADER *  THIS IS A GREEN BAR WITH WHITE TEXT   -->
 <p>
+
+<p>
+<A NAME="build"></A>
+<h3>The JavaHelp Version 2.0 Technical Compatibility Kit (TCK)</h3>
+<!--END SECTION HEADER *  THIS IS A GREEN BAR WITH WHITE TEXT   -->
+<p>
+Because the JavaHelp system is a Java SE platform optional package,
+any implementation of the specification must pass the TCK in order
+to verify its compatibility with the JSR 97 specification.
+</p>
+<p>
+The TCK is packaged as a Zip archive. After you extract it on your
+system you must:
+
+<ul>
+<li>edit and modify the five properties at the top of run-test.xml 
+</li>
+</ul>
+
+<p>
+Execution of the compatibility kit requires ANT. ANT is available at
+<A href="	http://ant.apache.org/">http://ant.apache.org/ </A>.
+<p>
+To run the tests execute the following command:
+<p><code><b><pre>	ant -f run-test.xml</pre></b></code>
+
+<form action="./TCK/DisplayLicense.html">
+ <input type="submit" value="continue">
+</form>
+
+
 
 <p>
 <A NAME="documentation"></A>
