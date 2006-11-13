@@ -131,7 +131,23 @@ to help topics.
 <h3>Build the JavaHelp System</h3>
 <!--END SECTION HEADER *  THIS IS A GREEN BAR WITH WHITE TEXT   -->
 <p>
-
+The easiest way to build JavaHelp is to open the three NetBeans projects that
+make up the JavaHelp sources in the 
+<a href="http://netbeans.org">NetBeans IDE</a>, or build using the Ant
+script in <code>javahelp_nbproject/build.xml</code>.  Note that the 
+build will download JDIC and the JSP and Servlet APIs which are necessary
+for compilation.
+<p>
+The project also has Makefiles for Solaris.  You will need ksh, csh,
+Glassfish and JDIC installed, and to set the J2EEHOME and JDICHOME
+environment variables.  The demo applications currently are 
+make-only.  The makefiles are adaptable to Linux with minimal
+effort.  
+<p>
+The canonical build process for releases of JavaHelp is
+using the Makefiles, not the Ant build scripts.  The latter are provided
+as a convenience.
+    
 <p>
 <A NAME="build"></A>
 <h3>The JavaHelp Version 2.0 Technical Compatibility Kit (TCK)</h3>
