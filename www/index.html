@@ -51,11 +51,11 @@ open source project includes the source to the reference implementation.
 
 <ul>
 <li><A HREF="#overview">Get a quick overview</A>
-<li><A HREF="#participate">Participate in the JT harness project</A></li>
-<li><A HREF="#documentation">Read about the JT harness</A></li>
-<li><A HREF="#download">Browse or download the JT harness source code</A></li>
-<li><A HREF="#build">Build the JT harness</A></li>
-<li><A HREF="#binary">Download the latest JT harness build</A></li>
+<li><A HREF="#participate">Participate in the JavaHelp project</A></li>
+<li><A HREF="#documentation">Read about the JavaHelp system</A></li>
+<li><A HREF="#download">Browse or download the JavaHelp system source code</A></li>
+<li><A HREF="#build">Build the JavaHelp system</A></li>
+<li><A HREF="#binary">Download the latest JavaHelp system build</A></li>
 </ul>
 
 
@@ -131,26 +131,28 @@ to help topics.
 <h3>Build the JavaHelp System</h3>
 <!--END SECTION HEADER *  THIS IS A GREEN BAR WITH WHITE TEXT   -->
 <p>
-The easiest way to build JavaHelp is to open the three NetBeans projects that
-make up the JavaHelp sources in the 
-<a href="http://netbeans.org">NetBeans IDE</a>, or build using the Ant
-script in <code>javahelp_nbproject/build.xml</code>.  Note that the 
-build will download JDIC and the JSP and Servlet APIs which are necessary
+The easiest way to build the JavaHelp system is to open the three NetBeans projects that
+make up the JavaHelp system sources in the 
+<a href="http://netbeans.org">NetBeans IDE</a>, or build it using the Ant
+<code>javahelp_nbproject/build.xml</code> build script.  Note that the 
+build downloads the JDIC and the JSP and Servlet APIs that are necessary
 for compilation.
-<a href="http://www.netbeans.info/downloads/index.php">
-    <img border="0" src="http://www.netbeans.org/images/v5/logo-frontpage.jpg" 
-    align="right" alt="Download the NetBeans IDE"/>
-</a>
+</p>
 <p>
-The project also has Makefiles for Solaris.  You will need ksh, csh,
-Glassfish and JDIC installed, and to set the J2EEHOME and JDICHOME
-environment variables.  The demo applications currently are 
-make-only.  The makefiles are adaptable to Linux with minimal
-effort.  
+The project also has Makefiles for GNU Make on the Solaris operating
+system.  You must download and install <A
+HREF="https://glassfish.dev.java.net">Glassfish</A> and <A
+HREF="https://jdic.dev.java.net">JDIC</A> and to set the
+J2EEHOME and JDICHOME environment variables to the top-level directories of
+each respectively.  The makefiles are adaptable to Linux with
+minimal effort.
+
 <p>
-The canonical build process for releases of JavaHelp is
-using the Makefiles, not the Ant build scripts.  The latter are provided
-as a convenience.
+The primary method for building the project is using GNU Make, the Ant scripts are provided
+solely for your convenience.  The demos included with the release are not built using the Ant system.
+You can only build them using GNU Make.
+</p>
+
     
 <p>
 <A NAME="build"></A>
