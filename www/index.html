@@ -133,21 +133,21 @@ to help topics.
 <p>
 The easiest way to build the JavaHelp system is to open the three
 NetBeans projects that make up the JavaHelp system sources in the <a
-href="http://netbeans.org">NetBeans IDE</a>, or build it using the Ant
-<code>build.xml</code> build script located in the project's
-<code>javahelp_nbproject/</code> directory.  Note that the build
-downloads the JDIC, JSP, and Servlet APIs that are required for
+href="http://netbeans.org">NetBeans IDE</a>. You can also build it
+using the Ant build script (<code>build.xml</code>) located in the
+project's <code>javahelp_nbproject/</code> directory.  Note that the
+build downloads the JDIC, JSP, and Servlet APIs that are required for
 compilation.
 </p>
 <p>
-The project also has Makefiles for GNU Make on the Solaris operating
-system.  You must download and install <A
+The project also has GNU Make makefiles that can build the project on
+the Solaris operating system.  In order to use the makefiles, you must
+download and install <A
 HREF="https://glassfish.dev.java.net">Glassfish</A> and <A
-HREF="https://jdic.dev.java.net">JDIC</A> and to set the
-J2EEHOME and JDICHOME environment variables to the top-level directories of
-each respectively.  The makefiles are adaptable to Linux with
-minimal effort.
-
+HREF="https://jdic.dev.java.net">JDIC</A> and set the J2EEHOME and
+JDICHOME environment variables to the top-level directories of each
+respectively.  The makefiles are adaptable to the Linux operating system.
+</p>
 <p>
 The primary method for building the project is using GNU Make, the Ant scripts are provided
 solely for your convenience.  The demos included with the release are not built using the Ant system.
