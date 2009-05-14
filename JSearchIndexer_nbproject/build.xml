@@ -28,13 +28,12 @@ have any questions.
     <import file="nbproject/build-impl.xml"/>
 
     <target name="-post-jar">
-        <echo>Creating merged jsearch.jar</echo>
-        <jar jarfile="${basedir}/dist/jsearch.jar" excludes="${build.classes.excludes}">
-            <fileset dir="${basedir}/build/classes">
-                <include name="**/*"/>
-            </fileset>
+        <echo>
+Creating merged jsearch.jar
+        </echo>
+        <copy todir="${basedir}/build/classes">
             <fileset dir="../JSearchClient_nbproject/build/classes/">
-                <include name="**/*"/>
+                <include name="**"/>
             </fileset>
             <fileset dir="../javahelp_nbproject/build/classes/">
                 <include name="com/sun/java/help/impl/HeaderParser.class"/>
@@ -50,11 +49,15 @@ have any questions.
                 <include name="javax/help/search/SearchQuery.class"/>
                 <include name="javax/help/search/SearchListener.class"/>
             </fileset>
-        </jar>
-        <echo>Creating jsearch-misc.jar</echo>
+        </copy>
+        <jar basedir="${basedir}/build/classes" jarfile="${basedir}/dist/jsearch.jar" 
+            excludes="${build.classes.excludes}"/>
+            <echo>
+Creating jsearch-misc.jar
+            </echo>
         
         <jar jarfile="${basedir}/dist/jsearch-misc.jar">
-            <fileset dir="../javahelp_nbproject/build/classes/">
+            <fileset dir="${basedir}/build/classes">
                 <include name="com/sun/java/help/impl/HeaderParser.class"/>
                 <include name="javax/help/HelpUtilities*.class"/>
                 <include name="javax/help/event/EventListenerList.class"/>

@@ -54,29 +54,14 @@ have any questions.
     <target name="release-source" description="Build the source zip file">
         <property name="version" value="2.0.05"/>
         <mkdir dir="dist"/>
-        <zip destfile="dist/javahelp2-src-${version}.zip" filesonly="true">
+        <zip destfile="dist/javahelp2-src-${version}.zip" >
             <zipfileset dir=".." prefix="javahelp2-${version}">
-                <and>
-                    <filename name="**/*"/>
-                    <none>
-                        <filename name="**/dist/**/*"/>
-                        <filename name="**/build/**/*"/>
-                        <filename name="www/**/*"/>
-                        <filename name="**/*.jar"/>
-                        <filename name="**/*.zip"/>
-                    </none>
-                    <or>
-                        <contains text="GNU General Public License"/>
-                        <filename name="**/nbproject/*.xml"/>
-                        <filename name="**/*.properties"/>
-                        <filename name="**/*.gif"/>
-                        <filename name="**/*.png"/>
-                        <filename name="**/*.jpg"/>
-                        <filename name="**/manifest.mf"/>
-                        <filename name="jhMaster/JavaHelp/javahelp/bin/jhindexer"/>
-                        <filename name="jhMaster/JavaHelp/javahelp/bin/jhsearch"/>
-                     </or>
-                </and>
+                <include name="**/*"/>
+                <exclude name="**/dist/**/*"/>
+                <exclude name="**/build/**/*"/>
+		<exclude name="www/**/*"/>
+		<exclude name="**/*.jar"/>
+		<exclude name="**/*.zip"/>
             </zipfileset>
         </zip>
     </target>
@@ -96,7 +81,7 @@ have any questions.
     
     <target name="download-tomcat-zip" unless="tomcat-zip-present">
         <echo message="Downloading Apache Tomcat for servlet-api.jar and jsp-api.jar"/>
-        <get src="http://archive.apache.org/dist/tomcat/tomcat-5/v5.5.20/bin/apache-tomcat-5.5.20.zip"
+        <get src="http://www.apache.org/dist/tomcat/tomcat-5/v5.5.20/bin/apache-tomcat-5.5.20.zip"
             dest="${tomcat-zip}"/>
     </target>
     
